@@ -1,22 +1,25 @@
+var peopleInfo = {};
+
 $(document).ready(function(){
 
 
 
     $("#employeeForm").submit(function(event) {
-        var peopleInfo = {};
+
+
         event.preventDefault();
 
 
         $.each($(this).serializeArray(),function (i, field) {
             peopleInfo[field.name] = field.value;
         });
-        sendData(peopleInfo);
+        sendData();
         console.log(peopleInfo);
     });
             //POSITIONING OF CALLS
 });
 
-function sendData (peopleInfo) {
+function sendData () {
 
     $.ajax({
         type: "POST",
