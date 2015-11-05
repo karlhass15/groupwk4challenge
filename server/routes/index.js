@@ -31,14 +31,14 @@ router.post("/data", function (req, res) {
             console.log(err);
         }
         res.send(addEmployee);
-    })
-});
+    });
 
 
 
-router.get("/output", function(req, res){
-    console.log("hello now!");
-    res.send(console.log("server has connected"));
+
+//router.get("/output", function(req, res){
+  //  console.log("hello now!");
+    //res.send(console.log("server has connected"));
     //ADDED BY TEAM 2
 });
 
